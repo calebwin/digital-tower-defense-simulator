@@ -14,6 +14,8 @@ var bullets = [];
 var CIRCLE_SIZE = 450;
 var mouseIsClicked = false;
 
+var BG_COLOR = color(222, 220, 180)
+
 var TOWERS = [
     {// Gunner
         name : "Gunner",
@@ -84,15 +86,15 @@ var TOWERS = [
         reloadInterval : 60*40,
         damage : 20,
         speed : 0.8,
-        time : 14*60*60,
-        price : 250*20,
+        time : 4*60*60,
+        price : 50*20,
     },
     {// Striker
         name : "Striker",
         range : 180,
         reloadInterval : 65,
         damage : 55,
-        speed : 2.2,
+        speed : 2.7,
         time : 13*60*60,
         price : 350*20,
     },
@@ -120,7 +122,7 @@ function setup() {
 }
 
 function draw() {
-    background(241, 249, 179);
+    background(BG_COLOR);
     
     fill(0,0,0);
     noStroke();
@@ -222,7 +224,7 @@ function draw() {
     }
     
     noFill();
-    stroke(241, 249, 179);
+    stroke(BG_COLOR);
     strokeWeight(10);
     ellipse(width/2,height/2,CIRCLE_SIZE+12,CIRCLE_SIZE+12)
     
