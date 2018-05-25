@@ -132,7 +132,7 @@ function draw() {
     text(round(money).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "$\n" + Math.round(health*100)/100 + "%\n" + "Wave " + wave + "/24\n" + floor(timer/60) + ":" + timer%60,10,10);
     push();
     textAlign(RIGHT,TOP);
-    text("Keep this tab in a seperate window",width-10,10);
+    text("Keep this tab open in a seperate window\nMaybe bookmark it too",width-10,10);
     pop();
     
     var START_LINE = 10+5*15;
