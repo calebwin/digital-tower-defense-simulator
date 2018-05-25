@@ -14,7 +14,7 @@ var bullets = [];
 var CIRCLE_SIZE = 450;
 var mouseIsClicked = false;
 
-var BG_COLOR = color(222, 220, 180)
+var BG_COLOR;
 
 var TOWERS = [
     {// Gunner
@@ -119,6 +119,7 @@ function setup() {
     height = windowHeight;
     angleMode(DEGREES)
     date = new Date();
+    BG_COLOR = color(222, 220, 180)
 }
 
 var DISCOURAGING_COMMENTS = ["You probably won't finish this game", "Try pressing some numbers", "Keep it open in a seperate window", "Share it with a frenemy", "It takes 24 hours", "You just can't", "You do need to sleep", "Give up", "Are you waiting for money?"];
