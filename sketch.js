@@ -121,6 +121,8 @@ function setup() {
     date = new Date();
 }
 
+var DISCOURAGING_COMMENTS = ["You probably won't finish this game", "Keep it in a seperate window", "It takes 24 hours", "You just can't", "You do need to sleep", "Give up", "Are you waiting for money?"];
+
 function draw() {
     background(BG_COLOR);
     
@@ -128,6 +130,10 @@ function draw() {
     noStroke();
     textAlign(LEFT,TOP)
     text(round(money).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "$\n" + Math.round(health*100)/100 + "%\n" + "Wave " + wave + "/24\n" + floor(timer/60) + ":" + timer%60,10,10);
+    push();
+    textAlign(RIGHT,TOP);
+    text("Keep this tab in a seperate window",width-10,10);
+    pop();
     
     var START_LINE = 10+5*15;
     var END_LINE = height-10-2*15;
@@ -155,6 +161,10 @@ function draw() {
     var currKey = parseInt(key)<TOWERS.length?parseInt(key):0;
     var currTower = TOWERS[currKey];
     text("["+currKey+"] - " + currTower.name + " (" + round(currTower.time/3600) + " minutes for $" + currTower.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ")",10,height-10)
+    push();
+    textAlign(RIGHT,BOTTOM);
+    text(DISCOURAGING_COMMENTS[floor(f/300)%DISCOURAGING_COMMENTS.length],width-10,height-10);
+    pop();
     
     noFill();
     stroke(0,0,0,100);
