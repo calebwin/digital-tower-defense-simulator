@@ -1,5 +1,3 @@
-// Digital Slaughter Simulator
-
 var f = 0;
 var date;
 var money = 1000*20;
