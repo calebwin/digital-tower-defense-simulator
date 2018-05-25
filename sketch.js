@@ -121,7 +121,7 @@ function setup() {
     date = new Date();
 }
 
-var DISCOURAGING_COMMENTS = ["You probably won't finish this game", "Keep it in a seperate window", "It takes 24 hours", "You just can't", "You do need to sleep", "Give up", "Are you waiting for money?"];
+var DISCOURAGING_COMMENTS = ["You probably won't finish this game", "Try pressing some numbers", "Keep it open in a seperate window", "It takes 24 hours", "You just can't", "You do need to sleep", "Give up", "Are you waiting for money?"];
 
 function draw() {
     background(BG_COLOR);
