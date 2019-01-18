@@ -121,7 +121,7 @@ function setup() {
     BG_COLOR = color(222, 220, 180)
 }
 
-const DISCOURAGING_COMMENTS = ["uou probably won't finish this game", "try pressing some numbers", "keep it open in a seperate window", "share it with a", "t takes 24 hours", "you just can't", "ou do need to sleep", "give up", "are you waiting for money"];
+const DISCOURAGING_COMMENTS = ["you probably won't finish this game", "try pressing some numbers", "keep it open in a seperate window", "share it with a friend", "it takes 24 hours", "you just can't", "you do need to sleep", "give up", "are you waiting for money"];
 
 function draw() {
     background(BG_COLOR);
